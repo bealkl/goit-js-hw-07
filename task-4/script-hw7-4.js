@@ -12,10 +12,10 @@ const counterManipulation = document.querySelectorAll('button');
 
 counterManipulation.forEach(buttonElement => buttonElement.addEventListener('click', changeSpanValue));
 
-function changeSpanValue() {
+function changeSpanValue(e) {
   const counterField = document.querySelector('#value');
   const counterNumber = Number(counterField.textContent);
 
-  if (this.dataset.action == 'increment') counterField.textContent = increment(counterNumber);
-  else if (this.dataset.action == 'decrement') counterField.textContent = decrement(counterNumber);
+  if (e.target.dataset.action == 'increment') counterField.textContent = increment(counterNumber);
+  else if (e.target.dataset.action == 'decrement') counterField.textContent = decrement(counterNumber);
 }
