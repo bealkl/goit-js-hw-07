@@ -17,5 +17,5 @@ function changeSpanValue(e) {
   const counterNumber = Number(counterField.textContent);
 
   if (e.target.dataset.action == 'increment') counterField.textContent = increment(counterNumber);
-  else if (e.target.dataset.action == 'decrement') counterField.textContent = decrement(counterNumber);
+  else counterField.textContent = decrement(counterNumber);
 }
